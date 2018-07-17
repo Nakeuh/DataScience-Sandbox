@@ -1,7 +1,8 @@
 import cv2
-from myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel, morpho
+from src.main.python.myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel, morpho
 
-image = cv2.imread('Images/numbers.png')
+imagePath = '../../../../resources/images/numbers.png'
+image = cv2.imread(imagePath)
 morpho.displayImage("Original", image)
 
 struct= strel.build("disc", 5, None)

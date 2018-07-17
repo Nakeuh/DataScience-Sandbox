@@ -1,8 +1,12 @@
 import cv2
 import numpy as np
-from myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel, morpho, myimage
 
-image = cv2.imread('Images/flower.jpg')
+from src.main.python.myLibs.ImageProcessing.MorphologicalImageProcessing import morpho, myimage, structElement as strel
+
+imagename = "../../../../resources/images/flower.jpg"
+
+
+image = cv2.imread(imagename)
 
 colorMarks = (20,20,200)
 
@@ -34,7 +38,7 @@ numberObjects=len(marksList)
 
 watershed=watershed*(255/(numberObjects+1))
 
-image = cv2.imread('Images/flower.jpg')
+image = cv2.imread(imagename)
 morpho.displayImage("Original image", image)
 morpho.displayImage("After Watersheds", watershed)
 

@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel
+from src.main.python.myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel
 
 def displayImage(name,image):
     cv2.imshow(name, image)

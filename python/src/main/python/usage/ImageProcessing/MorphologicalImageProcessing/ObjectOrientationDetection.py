@@ -1,9 +1,9 @@
 import cv2
-from myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel, morpho
+from src.main.python.myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel, morpho
 
-#imagePath = 'images/papier_60.png'
-#imagePath = 'images/papier_15.png'
-imagePath = 'images/papier_35.png'
+#imagePath = '../../../../resources/images/papier_60.png'
+#imagePath = '../../../../resources/images/papier_15.png'
+imagePath = '../../../../resources/images/papier_35.png'
 
 image = cv2.imread(imagePath)
 

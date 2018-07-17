@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
-from myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel, morpho, myimage
+from src.main.python.myLibs.ImageProcessing.MorphologicalImageProcessing import structElement as strel, morpho, myimage
 
-imagename='Images/feuille1.png'
+imagename='../../../../resources/images/feuille1.png'
 image = cv2.imread(imagename)
 disc = strel.build("disc", 5, None)
 gamma8 = strel.build("square", 5, None)

@@ -1,7 +1,7 @@
 import cv2
-from myLibs.ImageProcessing.MorphologicalImageProcessing import morpho, myhisto
+from src.main.python.myLibs.ImageProcessing.MorphologicalImageProcessing import morpho, myhisto
 
-imagename='Images/chat.jpg'
+imagename = "../../../../resources/images/chat.jpg"
 
 image = cv2.imread(imagename)
 
