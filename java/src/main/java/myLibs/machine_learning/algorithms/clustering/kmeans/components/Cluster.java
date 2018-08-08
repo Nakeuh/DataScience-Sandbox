@@ -1,4 +1,4 @@
-package myLibs.machineLearning.algorithms.clustering.components;
+package myLibs.machine_learning.algorithms.clustering.kmeans.components;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Cluster {
 
         int count = 0;
         for (Element dArr : this.datas) {
-            System.out.println("Element :" + dArr.getName());
+            System.out.println("ElementClassifier :" + dArr.getName());
             count++;
             if(count>= limit){
                 break;

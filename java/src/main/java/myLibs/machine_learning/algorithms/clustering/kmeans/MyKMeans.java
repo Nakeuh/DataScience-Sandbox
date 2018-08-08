@@ -1,17 +1,18 @@
-package myLibs.machineLearning.algorithms.clustering;
+package myLibs.machine_learning.algorithms.clustering.kmeans;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import myLibs.machineLearning.algorithms.clustering.components.*;
 import myLibs.calculation.*;
+import myLibs.machine_learning.algorithms.clustering.kmeans.components.Cluster;
+import myLibs.machine_learning.algorithms.clustering.kmeans.components.Element;
 import utils.Util;
 
 /**
  * KMEAN Algotihm :
  * 1) Initialize K centers with Datas (choosen randomly)
- * 2) Affect datas to clusters (Minimal Euclidian Distance between data and the center of the cluster)
- * 3) Recalculate center for each cluster (mean of datas)
+ * 2) Affect data to clusters (Minimal Euclidian Distance between data and the center of the cluster)
+ * 3) Recalculate center for each cluster (mean)
  * 4) Do 2)
  * 5) If centers have changed, go to 3)
  *
@@ -19,12 +20,12 @@ import utils.Util;
  */
 public class MyKMeans {
 
-    public static void clusterize(int k, List<Element> datas) {
+    public static Cluster[] clusterize(int k, List<Element> datas) {
         Cluster[] clusters = new Cluster[k];
 
         if (k > datas.size()) {
             System.out.println("Error, not enough datas.");
-            return;
+            return null;
         }
 
         // Choose a center for each cluster
@@ -59,9 +60,9 @@ public class MyKMeans {
             iteration++;
 
         }
-
         System.out.println("KMeans finished in " + iteration + " iterations.");
-        displayClusters(clusters);
+
+        return clusters;
     }
 
     /**
@@ -88,7 +89,7 @@ public class MyKMeans {
     }
 
     /**
-     * Calculate the mean of a cluster of datas
+     * Calculate the mean of a cluster
      * @param cluster
      * @return
      */
@@ -106,7 +107,7 @@ public class MyKMeans {
         return newCenter;
     }
 
-    private static void displayClusters(Cluster[] clusters) {
+    public static void displayClusters(Cluster[] clusters) {
         System.out.println();
         int i = 0;
         for (Cluster c : clusters) {

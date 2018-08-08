@@ -1,4 +1,4 @@
-package myLibs.machineLearning.algorithms.neuralNetwork;
+package myLibs.machine_learning.algorithms.neural_network;
 
 import java.util.Collections;
 import java.util.List;

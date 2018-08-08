@@ -1,8 +1,9 @@
 package usage.machineLearning.algorithms.clustering;
 
 
-import myLibs.machineLearning.algorithms.clustering.MyKMeans;
-import myLibs.machineLearning.algorithms.clustering.components.Element;
+import myLibs.machine_learning.algorithms.clustering.kmeans.MyKMeans;
+import myLibs.machine_learning.algorithms.clustering.kmeans.components.Cluster;
+import myLibs.machine_learning.algorithms.clustering.kmeans.components.Element;
 import org.json.JSONObject;
 import utils.FileUtil;
 
@@ -18,7 +19,8 @@ public class TestKMeans {
 
     public static void main(String[] args){
         try {
-            MyKMeans.clusterize(4,getData());
+            Cluster[] clusters = MyKMeans.clusterize(4,getData());
+            MyKMeans.displayClusters(clusters);
         }catch(Exception e){
             e.printStackTrace();
         }

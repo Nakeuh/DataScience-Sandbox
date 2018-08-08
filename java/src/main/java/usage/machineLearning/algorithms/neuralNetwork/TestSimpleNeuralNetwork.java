@@ -1,7 +1,7 @@
 package usage.machineLearning.algorithms.neuralNetwork;
 
 import myLibs.datasets.mnist.MnistExtract;
-import myLibs.machineLearning.algorithms.neuralNetwork.SimpleNeuralNetwork;
+import myLibs.machine_learning.algorithms.neural_network.SimpleNeuralNetwork;
 import org.javatuples.Pair;
 
 import java.util.List;

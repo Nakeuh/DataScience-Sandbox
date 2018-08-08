@@ -1,4 +1,4 @@
-package myLibs.machineLearning.algorithms.clustering.components;
+package myLibs.machine_learning.algorithms.clustering.kmeans.components;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class Element {
     }
 
     public static Element randomDoubleElement (int id,int nbTraits){
-        String name = "Element "+id;
+        String name = "ElementClassifier "+id;
 
         List<Double>traits = new ArrayList<Double>();
 
